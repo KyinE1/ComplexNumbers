@@ -1,16 +1,9 @@
-/*
-	account.h
-	Date Written: 3/3
-	Created by: Kyin Edwards
-*/
-
 #ifndef COMPLEX_H
 #define COMPLEX_H
 
 #include <tuple>
 
 class complex {
-	// Stand alone friend functions. 
 	friend std::ostream& operator<<(std::ostream& os, const complex& rhs);
 	friend std::istream& operator>>(std::istream&, complex&);
 	
@@ -20,7 +13,6 @@ class complex {
 		double imaginary_part;
 	
 	public:
-		// Constructor for the class structure. 
 		complex(double = 0.0, double = 0.0);
 		std::tuple<double, double> get_complex() const;
 		void set_complex(double, double);
